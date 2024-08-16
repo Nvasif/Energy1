@@ -1,0 +1,55 @@
+{
+    "pages": [
+      {
+        "name": "Home",
+        "menuSelector": "#menu-item-31 > a",
+        "expectedTitle": "About Consumers Energy Management Inc."
+      },
+      {
+        "name": "About Us",
+        "menuSelector": "#menu-item-36 > a",
+        "expectedTitle": "About Consumers Energy Management Inc."
+      },
+      {
+        "name": "Products",
+        "menuSelector": "#menu-item-32 > [href='products/']",
+        "expectedTitle": "Products"
+      },
+      {
+        "name": "Services",
+        "menuSelector": "#menu-item-34 > [href='services/']",
+        "expectedTitle": "Services"
+      },
+      {
+        "name": "Tools",
+        "menuSelector": "#menu-item-35 > [href='tools-resources/']",
+        "expectedTitle": "Tools & Resources"
+      },
+      {
+        "name": "Promotions",
+        "menuSelector": "#menu-item-673 > a",
+        "expectedTitle": "Promotions"
+      },
+      {
+        "name": "Careers",
+        "menuSelector": "#menu-item-1589 > a",
+        "expectedTitle": "Careers"
+      },
+      {
+        "name": "Blog",
+        "menuSelector": "#menu-item-1725 > a",
+        "expectedTitle": "Blog"
+      },
+      {
+        "name": "FAQs",
+        "menuSelector": "#menu-item-1727 > a",
+        "expectedTitle": "Frequently asked questions"
+      },
+      {
+        "name": "Contact",
+        "menuSelector": "#menu-item-1726 > a",
+        "expectedTitle": "Contact Us"
+      }
+    ]
+  }
+  

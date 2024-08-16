@@ -1,0 +1,11 @@
+{
+    "province": "Alberta",
+    "city": "Calgary",
+    "bedrooms": "3",
+    "squareFootage": "1000",
+    "houseAge": "2010",
+    "heatingTypes": {
+        "current": "Electric",
+        "new": "Oil"
+    }
+}

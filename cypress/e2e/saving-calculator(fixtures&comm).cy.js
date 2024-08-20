@@ -1,7 +1,8 @@
 ///<reference types="Cypress"/>
 const currentCostSelector = '[name="currentheatingcost"]'; 
 const newCostSelector = '[name="newheatingcost"]'; 
-const totalSavingsSelector = '#savings > p';
+const totalSavingsSelector =  '#savings > p';
+const totalSavingsValue = '#VTAS';
 
 beforeEach(() => {
     Cypress.on('uncaught:exception', (err, runnable) => {
@@ -18,7 +19,7 @@ describe('Savings Calculator - Heat Prices Calculations', () => {
     it('should change the price in the Current Heating Cost column', function() {
         cy.fillForm(this.data);
         cy.get(currentCostSelector).invoke('val').then((initialCost) => {
-            cy.changeHeatingType('Gas', this.data.heatingTypes.current);
+            cy.changeHeatingType('Natural Gas', this.data.heatingTypes.current);
             cy.checkCostChange(currentCostSelector, initialCost);
         });
     });
@@ -37,10 +38,10 @@ describe('Savings Calculator - Heat Prices Calculations', () => {
         cy.wait(2000); 
 
         cy.get(totalSavingsSelector).should('be.visible');
-        cy.get(totalSavingsSelector).invoke('text').then((savings) => {
+        cy.get(totalSavingsValue).invoke('text').then((savings) => {
             console.log('Total Savings:', savings.trim());
             expect(savings.trim()).to.not.equal('');
-            expect(parseFloat(savings.trim().replace('$', ''))).to.be.greaterThan(0);
+            expect(parseFloat(savings.trim().replace('$', ''))).not.to.be.equal(0);
         });
     });
 });

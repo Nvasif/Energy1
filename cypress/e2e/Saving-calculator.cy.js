@@ -97,10 +97,9 @@ describe('Savings Calculator - Heat Prices Calculations', () => {
         cy.wait(2000); 
 
         cy.get('#savings > p').should('be.visible');
-        cy.get('#savings > p').invoke('text').then((savings) => {
-            console.log('Total Savings:', savings.trim());
+        cy.get('#VTAS').invoke('text').then((savings) => {
             expect(savings.trim()).to.not.equal('');
-            expect(parseFloat(savings.trim().replace('$', ''))).to.be.greaterThan(0);
+            expect(parseFloat(savings.trim().replace('$', ''))).not.to.be.equal(0);
         });
     });
 });

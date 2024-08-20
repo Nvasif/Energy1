@@ -34,7 +34,7 @@ Cypress.Commands.add('fillForm', (data) => {
 Cypress.Commands.add('changeHeatingType', (currentType, newType) => {
     cy.get('#heattype').select(currentType).trigger('change');
     cy.get('[name="heatingtype"]').select(newType).trigger('change');
-    cy.wait(2000); // Ждем, чтобы обновились расчеты
+    cy.wait(2000); 
 });
 
 Cypress.Commands.add('checkCostChange', (costSelector, initialCost) => {
